@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form submit</title>
+    <style>
+        label,input{
+            display: block;
+        }
+        input+input{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter any name"/>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        document.querySelector("form").addEventListener("submit", getName);
+
+
+        function getName(event){
+            event.preventDefault();
+            alert(event.target.children[1].value);
+        }
+    </script>
+</body>
+</html>
